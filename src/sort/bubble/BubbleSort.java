@@ -3,7 +3,7 @@ package sort.bubble;
 /**
  * @Author ZhengQinfeng
  * @Date 2020/12/10 23:14
- * @dec 冒泡排序： 冒泡排序的实现思路是遍历数组，两两比较，将大的一个数往后排。
+ * @dec 冒泡排序： 冒泡排序的实现思路是遍历数组，两两比较，将较大的一个数往后排。
  */
 public class BubbleSort {
     public static void main(String[] args) {
