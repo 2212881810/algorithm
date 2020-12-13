@@ -9,8 +9,25 @@ public class SortTest {
     public static void main(String[] args) {
         int[] arr = {3, 4, 5, 1, 2, 9, 8, 7, 6};
 //        selectionSort(arr);
-        bubbleSort(arr);
+//        bubbleSort(arr);
+        insertionSort(arr);
         print(arr);
+    }
+
+    /**
+     * 插入排序
+     * @param arr
+     */
+    static void insertionSort(int[] arr) {
+        for (int i = 1; i < arr.length; i++) {
+            for (int j = i; j > 0; j--) {
+                if (arr[j] < arr[j - 1]) {
+                    swap(arr, j, j - 1);
+                }
+
+            }
+        }
+
     }
 
 
