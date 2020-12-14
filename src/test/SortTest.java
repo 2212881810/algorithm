@@ -24,7 +24,6 @@ public class SortTest {
                 if (arr[j] < arr[j - 1]) {
                     swap(arr, j, j - 1);
                 }
-
             }
         }
 

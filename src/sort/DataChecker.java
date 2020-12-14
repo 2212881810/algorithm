@@ -1,4 +1,7 @@
-package sort.select;
+package sort;
+
+import sort.select.SelectionSort;
+import sort.shell.ShellSort;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -28,7 +31,9 @@ public class DataChecker {
 
         Arrays.sort(arr);  // jdk提供的排序算法
 
-        SelectionSort.sort3(checkArr);  // 自己写排序算法
+//        SelectionSort.sort3(checkArr);
+
+        ShellSort.sort2(checkArr);
 
 
         // 比较

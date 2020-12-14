@@ -30,7 +30,7 @@ public class SelectionSort {
      * <p>
      * 内层for循环： 找出最小元素的下标
      */
-    static void sort3(int[] arr) {
+    public static void sort3(int[] arr) {
 
 
         for (int j = 0; j < arr.length - 1; j++) {  //因为最后一个元素不需要与其它元素进行比较，后面外层循环的遍历次数是arr.length-1
