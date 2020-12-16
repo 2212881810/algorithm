@@ -1,6 +1,7 @@
 package sort;
 
 import sort.merge.MergeSort;
+import sort.quick.QuickSort;
 import sort.select.SelectionSort;
 import sort.shell.ShellSort;
 
@@ -35,7 +36,8 @@ public class DataChecker {
 //        SelectionSort.sort3(checkArr);
 
 //        ShellSort.sort2(checkArr);
-        MergeSort.sort(checkArr,0 , checkArr.length -1);
+//        MergeSort.sort(checkArr,0 , checkArr.length -1);
+        QuickSort.sort(checkArr,0 , checkArr.length -1);
 
         // 比较
         for (int i = 0; i < checkArr.length; i++) {

@@ -3,7 +3,8 @@ package sort.merge;
 /**
  * @Author ZhengQinfeng
  * @Date 2020/12/14 23:29
- * @dec 归并：左右两个数组必须是排好序的数组
+ * @dec 归并：左右两个数组必须是排好序的数组，如果保证左右两个数组是有序的，递归到数组只有一个元素，那一定是有序的
+ *      两个排好序的数组进行两两归并，
  */
 public class MergeSort {
     public static void main(String[] args) {
@@ -62,15 +63,18 @@ public class MergeSort {
         //创建一个新的数组
         int[] temp = new int[bound - leftPtr + 1];
 
-
+        // 这里就是在比较左右两个数组的大小，小的往temp数组里面放
         while (i <= mid && j <= bound) {
             temp[k++] = arr[i] <= arr[j] ? arr[i++] : arr[j++];
         }
 
+        // 左边数组还有剩余元素，那么只接拷贝到数组最后面【因为这些元素一定是最大的】
         while (i <= mid) {
             temp[k++] = arr[i++];
         }
 
+
+        // 右边数组还有剩余元素，那么直接拷贝到数组最后面
         while (j <= bound) {
             temp[k++] = arr[j++];
         }
