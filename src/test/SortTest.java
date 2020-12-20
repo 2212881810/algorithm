@@ -10,12 +10,34 @@ public class SortTest {
         int[] arr = {3, 4, 5, 1, 2, 9, 8, 7, 6};
 //        selectionSort(arr);
 //        bubbleSort(arr);
-        insertionSort(arr);
+//        insertionSort(arr);
+//        print(arr);
+
+        swap2(arr, 0, 1);
+
         print(arr);
+
+
+    }
+
+    /**
+     * i,j 位置相同会报错
+     *
+     * @param arr
+     * @param i
+     * @param j
+     */
+    static void swap2(int[] arr, int i, int j) {
+        // ^ 转成二进制，从高位开始比较，相同为0 ，不相同为1
+        arr[i] = arr[i] ^ arr[j];
+        arr[j] = arr[i] ^ arr[j];
+        arr[i] = arr[i] ^ arr[j];
+
     }
 
     /**
      * 插入排序
+     *
      * @param arr
      */
     static void insertionSort(int[] arr) {
